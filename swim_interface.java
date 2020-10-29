@@ -9,13 +9,13 @@ public class swim_interface {
     }
 
     public interface CanFly{
-        void fly();
+        public void fly();
     }
     public interface CanRun{
-        void run();
+        public void run();
     }
     public interface CanSwim{
-        void swim();
+       public void swim();
     }
 
 }
