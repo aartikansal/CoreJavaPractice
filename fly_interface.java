@@ -9,8 +9,8 @@ public class fly_interface {
 
     }
     public interface CanFly{
-        void fly();
-        void move();
+        public void fly();
+        public void move();
     }
 
 }
