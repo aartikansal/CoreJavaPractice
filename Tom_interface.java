@@ -46,5 +46,14 @@ public class Tom_interface {
 
         }
     }
+    public static class Mouse implements CanMove, Edible{
+    @Override
+    public void move(){
 
+    }
+    @Override
+    public void beEaten(){
+
+    }
+}
 }
