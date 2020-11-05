@@ -50,5 +50,5 @@ public class Tom_interface {
     public void beEaten(){
 
     }
-}
-}
+      }
+        }
