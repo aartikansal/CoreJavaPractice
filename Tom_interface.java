@@ -20,7 +20,7 @@ public class Tom_interface {
     public interface CanEat {
         void eat();
     }
-    public  static class Cat implements CanMove, Edible{
+    public  static class Cat implements CanMove, Edible, CanEat{
         @Override
         public void move(){
 
@@ -29,6 +29,11 @@ public class Tom_interface {
         @Override
         public void beEaten() {
 
+        }
+
+        @Override
+        public void eat() {
+            
         }
     }
     public static class Dog implements CanMove, CanEat{
