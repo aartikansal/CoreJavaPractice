@@ -3,59 +3,75 @@
 Cats
 */
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class CatKey {
     public static void main(String[] args) throws Exception {
-    }
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    static class CatFactory {
-        static Cat getCatByKey(String key) {
-            Cat cat = null;
-            if ("feral".equals(key)) {
+    String key;
+
+        while (!(key = reader.readLine()).equals("")) {
+        Cat cat = CatFactory.getCatByKey(key);
+        System.out.println(cat.toString());
+    }
+}
+
+static class CatFactory {
+    static Cat getCatByKey(String key) {
+        Cat cat;
+        switch (key) {
+            case "feral":
                 cat = new MeanCat("Claws");
-            } else if ("miss".equals(key)) {
+                break;
+            case "miss":
                 cat = new NiceCat("Missy");
-            } else if ("smudge".equals(key)) {
+                break;
+            case "smudge":
                 cat = new NiceCat("Smudgey");
-            } else {
+                break;
+            default:
                 cat = new Cat(key);
-            }
-            return cat;
+                break;
         }
+        return cat;
+    }
+}
+
+static class Cat {
+    private String name;
+
+    protected Cat(String name) {
+        this.name = name;
     }
 
-    static class Cat {
-        private String name;
-
-        protected Cat(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return this.name;
-        }
-
-        public String toString() {
-            return "I'm " + getName() + ", an alley cat";
-        }
+    public String getName() {
+        return this.name;
     }
 
-    static class MeanCat extends Cat {
-        MeanCat(String name) {
-            super(name);
-        }
+    public String toString() {
+        return "I'm " + getName() + ", an alley cat";
+    }
+}
 
-        public String toString() {
-            return "I'm " + getName() + ", and I'm going to claw your eyes out";
-        }
+static class MeanCat extends Cat {
+    MeanCat(String name) {
+        super(name);
     }
 
-    static class NiceCat extends Cat {
-        NiceCat(String name) {
-            super(name);
-        }
-
-        public String toString() {
-            return "I'm a nice kitten named " + getName();
-        }
+    public String toString() {
+        return "I'm " + getName() + ", and I'm going to claw your eyes out";
     }
+}
+
+static class NiceCat extends Cat {
+    NiceCat(String name) {
+        super(name);
+    }
+
+    public String toString() {
+        return "I'm a nice kitten named " + getName();
+    }
+}
 }
