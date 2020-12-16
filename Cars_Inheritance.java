@@ -6,8 +6,8 @@ OOP: Cars
 public class Cars_Inheritance {
     public static void main(String[] args) {
         new LuxuryCar().printlnDesire();
-        //new Cars_Inheritance().CheapCar().printlnDesire();
-       // new Cars_Inheritance().Ferrari().printlnDesire();
+        new CheapCar().printlnDesire();
+        new Ferrari().printlnDesire();
         new GeoMetro().printlnDesire();
     }
 
