@@ -22,7 +22,7 @@ public class Inheritance_BodyParts {
         }
 
         public String toString() {
-            return containsBones() ? name + "Yes" : name + "No";
+            return containsBones().equals("Yes") ? name + " contains bones" : name + " does not contain bones";
         }
     }
 
@@ -35,7 +35,7 @@ public class Inheritance_BodyParts {
         }
 
         public Object containsBones() {
-            return super.containsBones() && !isArtificial;
+            return super.containsBones().equals("Yes") && !isArtificial ? "Yes" : "No";
         }
     }
 
