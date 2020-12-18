@@ -12,6 +12,14 @@ public class Method_over {
         System.out.println("Filling with String objects");
         printMatrix(m, n, (Object) value);
     }
+    public static void printMatrix(int m, int n, Integer value) {
+        System.out.println("Filling with Integer objects");
+        printMatrix(m, n, (Object) value);
+    }
+    public static void printMatrix(int m, int n, Double value) {
+        System.out.println("Filling with Double objects");
+        printMatrix(m, n, (Object) value);
+    }
 
     public static void printMatrix(int m, int n, Object value) {
         for (int i = 0; i < m; i++) {
