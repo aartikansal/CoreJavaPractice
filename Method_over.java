@@ -40,6 +40,11 @@ public class Method_over {
         System.out.println("Filling with Character objects");
         printMatrix(m, n, (Object) value);
     }
+    public static void printMatrix(int m, int n, Byte value) {
+        System.out.println("Filling with Byte objects");
+        printMatrix(m, n, (Object) value);
+    }
+
 
     public static void printMatrix(int m, int n, Object value) {
         for (int i = 0; i < m; i++) {
