@@ -20,6 +20,14 @@ public class Method_over {
         System.out.println("Filling with Double objects");
         printMatrix(m, n, (Object) value);
     }
+    public static void printMatrix(int m, int n, Float value) {
+        System.out.println("Filling with Float objects");
+        printMatrix(m, n, (Object) value);
+    }
+    public static void printMatrix(int m, int n, Long value) {
+        System.out.println("Filling with Long objects");
+        printMatrix(m, n, (Object) value);
+    }
 
     public static void printMatrix(int m, int n, Object value) {
         for (int i = 0; i < m; i++) {
