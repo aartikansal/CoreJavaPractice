@@ -66,6 +66,8 @@ public class Inheritance_BodyParts {
         fingers.add(new Finger("Ring-finger", false));
         fingers.add(new Finger("Pinky", true));
         System.out.println(fingers.toString());
+
+        // check this for se8 exam
     }
 }
 
